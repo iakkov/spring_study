@@ -10,5 +10,9 @@
     <bean id="musicBean"
           class="com.example.demo.test.ClassicalMusic">
     </bean>
+    <bean id="musicPlayer"
+          class="com.example.demo.test.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 
 </beans>

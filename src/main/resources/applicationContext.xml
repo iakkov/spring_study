@@ -10,13 +10,24 @@
 
     <contex:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="musicBean"
+    <bean id="hipHopMusic"
+          class="com.example.demo.test.HipHopMusic">
+    </bean>
+    <bean id="rockMusic"
+          class="com.example.demo.test.RockMusic">
+    </bean>
+    <bean id="classicalMusic"
           class="com.example.demo.test.ClassicalMusic">
     </bean>
     <bean id="musicPlayer"
           class="com.example.demo.test.MusicPlayer">
-        <property name="music" ref="musicBean"/>
-
+        <property name="musicList">
+                <list>
+                    <ref bean="hipHopMusic"/>
+                    <ref bean="rockMusic"/>
+                    <ref bean="classicalMusic"/>
+                </list>
+        </property>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>

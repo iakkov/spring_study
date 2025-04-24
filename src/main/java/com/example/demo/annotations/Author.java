@@ -2,9 +2,8 @@ package com.example.demo.annotations;
 
 import java.lang.annotation.*;
 
-@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Author {
-    String name() default "William";
-    int dateOfBirth() default 35;
+    String name() default "Iakov";
+    int dateOfCreation() default 2025;
 }

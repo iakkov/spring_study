@@ -17,7 +17,10 @@
           class="com.example.demo.test.RockMusic">
     </bean>
     <bean id="classicalMusic"
-          class="com.example.demo.test.ClassicalMusic">
+          class="com.example.demo.test.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+    factory-method="getClassicalMusic">
     </bean>
     <bean id="musicPlayer"
           class="com.example.demo.test.MusicPlayer">
